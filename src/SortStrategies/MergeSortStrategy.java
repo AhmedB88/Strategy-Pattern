@@ -2,7 +2,7 @@ package SortStrategies;
 
 public class MergeSortStrategy implements SortStrategy {
     @Override
-    public long sort(int[] numbers) {
+    public int[] sort(int[] numbers) {
 
         long startTime = System.nanoTime(); // Startzeit
 
@@ -12,7 +12,7 @@ public class MergeSortStrategy implements SortStrategy {
 
         long duration = endTime - startTime; // Dauer in Nanosekunden
         System.out.println("Dauer: " + duration + " ns");
-        return duration;
+        return numbers;
 
     }
 

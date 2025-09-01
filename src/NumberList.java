@@ -12,10 +12,10 @@ public class NumberList {
         this.sortStrategy = sortStrategy;
     }
 
-    public long sort() {
+    public int[] sort() {
         if (sortStrategy == null) {
             System.out.println("Keine Sortierstrategie gesetzt!");
-            return -1;
+            return null;
         }
         return sortStrategy.sort(numbers);
     }

@@ -10,32 +10,30 @@ public class Sortieralgorithmen {
 
         int[] numbers = generateRandomList(size, minValue, maxValue);
 
-        TreeSet<Long> sortedSet = new TreeSet<>();
 
 
         NumberList list = new NumberList(numbers);
 
         // BubbleSort
         list.setSortStrategy(new BubbleSortStrategy());
-        sortedSet.add(list.sort());
+        int [] bubbleSortStrategyList = list.sort();
 
         // QuickSort
         list.setSortStrategy(new QuickSortStrategy());
-        sortedSet.add(list.sort());
+        int [] QuickSortStrategyList = list.sort();
 
         // InsertionSort
         list.setSortStrategy(new InsertionSortStrategy());
-        sortedSet.add(list.sort());
+        int [] InsertionSortStrategyList = list.sort();
 
         // MergeSort
         list.setSortStrategy(new MergeSortStrategy());
-        sortedSet.add(list.sort());
+        int [] MergeSortStrategyList = list.sort();
 
         // SelectionSort
         list.setSortStrategy(new SelectionSortStrategy());
-        sortedSet.add(list.sort());
+        int [] SelectionSortStrategyList = list.sort();
 
-        System.out.println(sortedSet);
     }
 
     public static int[] generateRandomList(int size, int minValue, int maxValue) {

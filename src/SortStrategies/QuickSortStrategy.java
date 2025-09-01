@@ -3,14 +3,14 @@ package SortStrategies;
 // QuickSort
 public class QuickSortStrategy implements SortStrategy {
     @Override
-    public long sort(int[] numbers) {
+    public int[] sort(int[] numbers) {
         long startTime = System.nanoTime(); // Startzeit
         quickSort(numbers, 0, numbers.length - 1);
         System.out.println("QuickSort: " + java.util.Arrays.toString(numbers));
         long endTime = System.nanoTime();    // Endzeit
         long duration = endTime - startTime; // Dauer in Nanosekunden
         System.out.println("Dauer: " + duration + " ns");
-        return duration;
+        return numbers;
 
     }
 
