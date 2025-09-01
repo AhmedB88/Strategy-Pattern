@@ -11,27 +11,31 @@ public class Sortieralgorithmen {
         int[] numbers = generateRandomList(size, minValue, maxValue);
 
 
-
         NumberList list = new NumberList(numbers);
 
         // BubbleSort
-        list.setSortStrategy(new BubbleSortStrategy());
+        SortStrategy sortStrategy = new BubbleSortStrategy();
+        list.setSortStrategy(sortStrategy);
         int [] bubbleSortStrategyList = list.sort();
 
         // QuickSort
-        list.setSortStrategy(new QuickSortStrategy());
+        sortStrategy = new QuickSortStrategy();
+        list.setSortStrategy(sortStrategy);
         int [] QuickSortStrategyList = list.sort();
 
         // InsertionSort
-        list.setSortStrategy(new InsertionSortStrategy());
+        sortStrategy = new InsertionSortStrategy();
+        list.setSortStrategy(sortStrategy);
         int [] InsertionSortStrategyList = list.sort();
 
         // MergeSort
-        list.setSortStrategy(new MergeSortStrategy());
+        sortStrategy = new MergeSortStrategy();
+        list.setSortStrategy(sortStrategy);
         int [] MergeSortStrategyList = list.sort();
 
         // SelectionSort
-        list.setSortStrategy(new SelectionSortStrategy());
+        sortStrategy = new SelectionSortStrategy();
+        list.setSortStrategy(sortStrategy);
         int [] SelectionSortStrategyList = list.sort();
 
     }
